@@ -100,7 +100,7 @@ def sell(token_address: str, percentage: int = 100, slippage: int = 5) -> bool:
         print("Percentage must be between 1 and 100.")
         return False
     
-    token_balance = get_token_balance_lamports(str(token_address))
+    token_balance = get_token_balance_lamports(token_address)
     print("Token Balance:", token_balance)    
     
     if token_balance == 0:
